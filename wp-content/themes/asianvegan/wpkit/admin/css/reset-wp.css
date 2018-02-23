@@ -1,0 +1,267 @@
+/*******************************************************************************
+Reset Wordpress
+*/
+
+
+/*#adminmenu .wp-submenu {
+	position: initial;
+	padding: 0;
+    overflow: hidden;
+	display: none;
+    transition: all .55s cubic-bezier(0.76, -0.14, 0.55, 1.32);
+}
+
+#adminmenu .wp-has-current-submenu.menu-is-showing .wp-submenu {
+	display: initial !important;
+}
+
+
+/* Admin menu *
+	#adminmenuback,
+	#adminmenuwrap,
+	#adminmenu,
+	#adminmenu .wp-submenu {
+	width: initial;
+	}
+
+	#adminmenu {
+	display: flex;
+	flex-direction: column;
+	}
+
+		#adminmenu #usersidedeckwrap {
+		order: 0;
+		box-sizing: border-box;
+		padding: 0px 12px 12px;
+		}
+
+		#adminmenu > *:not(#usersidedeckwrap) {
+		order: 1;
+		}
+
+
+
+	#wpcontent,
+	#wpfooter {
+	margin-left: initial;
+	}
+
+	#adminmenu a {
+	color: inherit;
+	}
+
+	#adminmenuback,
+	#adminmenuwrap,
+	#adminmenu {
+	width: 240px;
+	color: rgba(255,255,255,.75);
+	background-color: #31313E;
+	background-color: #1d242a;
+	}
+
+		#adminmenu .wp-submenu > li {
+		background-color: inherit;;
+		}
+
+
+		#adminmenu .wp-submenu-head,
+		#adminmenu a.menu-top,
+		.wp-not-menu-item {
+		font-size: 13px;
+		}
+
+		.dashicons,
+		.dashicons-before:before {
+		font-size: 16px;
+		}
+
+
+	#wpcontent,
+	#wpfooter {
+	margin-left: 240px;
+	}
+
+/*******************************************************************************
+
+*/
+
+
+	/*#adminmenu .wp-submenu {
+		position: initial;
+		padding: 0;
+	    overflow: hidden;
+		display: none;
+	}
+
+	/* Opens the menu if is current
+	*/
+	/*#adminmenu .wp-has-current-submenu.menu-is-showing .wp-submenu {
+	display: initial;
+	}
+
+
+	/* Admin menu
+	*/
+
+		/* Not needed but prevents the wpkit #usersidedeckwrap from appearing at
+		the bottom while script changes its position. Old browsers will have to
+		deal with it
+		*/
+		#adminmenu {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		}
+
+			#adminmenu #usersidedeckwrap {
+			order: 0;
+			}
+
+			#adminmenu > *:not(#usersidedeckwrap) {
+			order: 1;
+			}
+
+			#adminmenu .wp-submenu,
+			.folded #adminmenu .wp-has-current-submenu .wp-submenu,
+			.folded #adminmenu a.wp-has-current-submenu:focus+.wp-submenu {
+			-webkit-box-shadow: initial;
+			box-shadow: initial:
+			}
+
+	/* Buttons */
+		/* Add new item in edit.php page "Draft" & "Preview" *
+		.wrap .add-new-h2,
+		.wrap .add-new-h2:active,
+		.wrap .page-title-action,
+		.wrap .page-title-action:active,
+		 /* Metabox Publish *
+		#publishing-action input.button-primary,
+		/* Metabox Publish *
+		#minor-publishing-actions .button,
+		/* Metaboxes *
+		.postbox .button,
+		/* Self explained *
+		#insert-media-button,
+		/* Self explained *
+		.submit .button,
+		/* Every button in forms and tables *
+		#posts-filter .button
+		*/
+		.wp-core-ui .button-primary,
+		.wp-core-ui .button-secondary,
+		.wp-core-ui .button,
+		.wp-core-ui .button.button-large,
+		.wp-core-ui .button.button-small,
+		.wp-core-ui .button.insert-media,
+		.wp-core-ui .page-title-action {
+		text-shadow: initial;
+	    font-weight: 400;
+	    font-size: inherit;
+		color: inherit;
+		text-align: initial;
+		height: initial;
+		width: initial;
+	    background: initial;
+	    border: initial;
+	    border-radius: initial;
+		box-shadow: initial;
+		vertical-align: initial;
+
+		border: 1px solid #ddd;
+	    background: transparent;
+	    color: #666;
+	    font-size: 13px;
+	    border-radius: 3px;
+
+		display: inline-block;
+		transition: all .15s linear;
+		}
+
+			.wp-core-ui .button-primary:focus,
+			.wp-core-ui .button-primary:hover,
+			.wp-core-ui .button-primary:active,
+			.wp-core-ui .button-secondary:focus,
+			.wp-core-ui .button-secondary:hover,
+			.wp-core-ui .button-secondary:active,
+			.wp-core-ui .button:focus,
+			.wp-core-ui .button:hover,
+			.wp-core-ui .button:active,
+			.wp-core-ui .button.button-large:focus,
+			.wp-core-ui .button.button-large:hover,
+			.wp-core-ui .button.button-large:active,
+			.wp-core-ui .button.button-small:focus,
+			.wp-core-ui .button.button-small:hover,
+			.wp-core-ui .button.button-small:active,
+			.wp-core-ui .button.insert-media:focus,
+			.wp-core-ui .button.insert-media:hover,
+			.wp-core-ui .button.insert-media:active,
+			.wp-core-ui .page-title-action:focus,
+			.wp-core-ui .page-title-action:hover,
+			.wp-core-ui .page-title-action:active {
+
+			text-shadow: initial;
+		    font-weight: 400;
+		    font-size: inherit;
+			color: inherit;
+			text-align: initial;
+			height: initial;
+			width: initial;
+		    background: initial;
+		    border: initial;
+		    border-radius: initial;
+			box-shadow: initial;
+			vertical-align: initial;
+
+			border: 1px solid #ddd;
+		    background: #ddd;
+		    color: #666;
+		    font-size: 13px;
+		    border-radius: 3px;
+			}
+
+			.wp-core-ui .button-primary,
+			.wp-core-ui .page-title-action {
+			background-color: #008CFF;
+			color: #FFF;
+			border: 0;
+			}
+
+			.wp-core-ui .button-primary:hover,
+			.wp-core-ui .button-primary:focus,
+			.wp-core-ui .button-primary:active,
+			.wp-core-ui .page-title-action:focus,
+			.wp-core-ui .page-title-action:hover,
+			.wp-core-ui .page-title-action:active  {
+			background-color: #008CFF;
+			color: #FFF;
+			box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+			border: 0;
+			}
+
+/*******************************************************************************
+Toolbar
+*/
+
+	#wpadminbar #wp-admin-bar-my-account.with-avatar>.ab-empty-item img,
+	#wpadminbar #wp-admin-bar-my-account.with-avatar>a img {
+		border: 0;
+		height: initial;
+	}
+
+/*******************************************************************************
+#wpbody
+*/
+
+	.metabox-holder .postbox-container .empty-container {
+	border-width: 1px;
+	}
+
+		.postbox {
+		border-color: transparent;
+		}

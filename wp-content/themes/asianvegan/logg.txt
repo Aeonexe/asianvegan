@@ -1,0 +1,19 @@
+Functions
+
+
+Function Reference/wk_widgets_grid
+
+	Descripción
+
+	Muestra los widgets del área de widget en un layout de columnas o filas.
+
+	wk_widgets_grid( $sidebar_id, $layout );
+
+	$sidebar_id
+		(string)(necesario) El id del área de widgets
+
+	$layout 
+		(string)(necesario) Si el layout es columnas o filas
+
+		'columns' 	Columnas
+		'rows'		filas

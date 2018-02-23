@@ -1,0 +1,150 @@
+.ui-text-red { color: $red; }
+.ui-text-red-important { color: $red !important; }
+
+.ui-text-gold, .ui-text-yellow { color: $yellow; }
+.ui-text-gold-important, .ui-text-yellow-important { color: $yellow !important; }
+
+.ui-text-white { color: $white; }
+.ui-text-white-important { color: $white !important; }
+
+.ui-text-black, .ui-text-dark { color: $black; }
+.ui-text-black-important, .ui-text-dark-important { color: $black !important; }
+
+// Text style
+
+.ui-text-light, .ui-text-100 { font-weight: 100; }
+.ui-text-light-important, .ui-text-100-important { font-weight: 100 !important; }
+
+.ui-text-200 { font-weight: 200; }
+.ui-text-200-important { font-weight: 200 !important; }
+
+.ui-text-300 { font-weight: 300; }
+.ui-text-300-important { font-weight: 300 !important; }
+
+.ui-text-regular, .ui-text-400 { font-weight: 400; }
+.ui-text-regular-important, .ui-text-400-important { font-weight: 400 !important; }
+
+.ui-text-500 { font-weight: 500; }
+.ui-text-500-important { font-weight: 500 !important; }
+
+.ui-text-600 { font-weight: 600; }
+.ui-text-600-important { font-weight: 600 !important; }
+
+.ui-text-700 { font-weight: 700; }
+.ui-text-700-important { font-weight: 700 !important; }
+
+.ui-text-bold, .ui-text-800 { font-weight: 800; }
+.ui-text-bold-important, .ui-text-800-important { font-weight: 800 !important; }
+
+.ui-text-900 { font-weight: 900; }
+.ui-text-900-important { font-weight: 900 !important; }
+
+
+.ui-text-uppercase { text-transform: uppercase; }
+.ui-text-uppercase-important { text-transform: uppercase !important; }
+
+.ui-text-underline { text-decoration: underline; }
+.ui-text-underline-important { text-decoration: underline !important; }
+
+.ui-align-center { display: block; margin: auto; }
+.ui-align-center-important { display: block !important; margin: auto !important; }
+
+
+//background colors {
+.ui-bg-white, .ui-bg-light { background-color: $white; }
+.ui-bg-white-important, .ui-bg-light-important { background-color: $white !important; }
+
+.ui-bg-black, .ui-bg-dark { background-color: $black; }
+.ui-bg-black-important, .ui-bg-dark-important { background-color: $black !important; }
+
+.ui-bg-red { background-color: $red; color: $white; }
+.ui-bg-red-important { background-color: $red !important; color: $white !important; }
+
+.ui-bg-gold, .ui-bg-yellow { background-color: $yellow; }
+.ui-bg-gold-important, .ui-bg-yellow-important { background-color: $yellow !important; }
+
+.ui-bg-brown { background-color: $brown; }
+.ui-bg-brown-important, .ui-bg-cocoa-important { background-color: $brown !important; }
+
+.ui-bg-pink { background-color: $pink; }
+.ui-bg-pink-important { background-color: $pink !important; }
+
+.ui-bg-blue { background-color: $blue; }
+.ui-bg-blue-important { background-color: $blue !important; }
+
+.ui-bg-gray { background-color: $gray; }
+.ui-bg-gray-important { background-color: $gray !important; }
+
+// Btn
+.ui-btn,
+.ui-button {
+	font-weight: 700;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: $white;
+	background-color: $blue;
+	padding: 18px 60px;
+	display: inline-block;
+	&:hover {
+	    background-color: $gray;
+	}
+}
+
+.ui-btn-black {
+	@extend .ui-btn;
+	background-color: $black;
+	color: $white;
+	&:hover {
+		background-color: $gray;
+	}
+}
+
+
+// Title
+[class*="ui-title"] { font-family: $headersFont; line-height: 1.25;}
+
+.ui-title {
+	font-size: 30px;
+	text-transform: uppercase;
+    letter-spacing: .1em;
+}
+.ui-title-small { font-size: 16px; font-weight: 700; text-transform: uppercase;  letter-spacing: .1em; }
+.ui-title-big {
+	font-size: 70px;
+	@media #{$onlyMobile} { font-size: 36px; }
+}
+
+// Subtitle
+[class*="ui-subtitle"] { font-family: $mainFont; }
+.ui-subtitle { font-size: 22px; }
+.ui-subtitle-small { font-size: 18px; }
+.ui-subtitle-big {
+	font-size: 30px;
+	@media #{$onlyMobile} { font-size: 18px; }
+}
+.ui-feed-title {
+	font-size: 16px;
+}
+
+
+// Box model
+
+.ui-box-model { padding-left: $boxModel; padding-right: $boxModel; }
+@media #{$onlyMobile} { .ui-m-box-model { padding-left: $boxModel; padding-right: $boxModel; } }
+@media #{$onlyDesktop} { .ui-d-box-model { padding-left: $boxModel; padding-right: $boxModel; } }
+
+hr.ui-restaurantes {
+	border-color: $colorRestaurantes;
+}
+
+hr.ui-articulos {
+	border-color: $colorArticulos;
+}
+
+hr.ui-recetas {
+	border-color: $colorRecetas;
+}
+
+hr.ui-recetas-comunidad {
+	border-color: $colorRecetasComunidad;
+}

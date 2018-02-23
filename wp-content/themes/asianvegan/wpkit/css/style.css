@@ -1,0 +1,115 @@
+
+/*********************************************************************************
+Options */
+
+	.description.description-header {
+	padding: 0px 12px 12px 12px;
+	}
+
+	.description .icon {
+	font-size: inherit;
+	text-decoration: none;
+	vertical-align: middle;
+	}
+
+	.description a {
+	text-decoration: inherit;
+	color: inherit;
+	}
+
+		.description a:hover {
+		color: dodgerblue;
+		}
+
+		.description a:active,
+		.description a:focus {
+		outline: 0;
+		box-shadow: none;
+		}
+
+/*********************************************************************************
+ Image Uploader */
+
+		.wk_option_image_uploader_container {
+		position: relative;
+		display: inline-block;
+		margin-top: 22px;
+		}
+
+		.wk_option_image_uploader_container .image_src {
+		transition: .15s ease-out;
+		opacity: 1;
+		}
+
+		.wk_option_image_uploader_container:hover .image_src {
+		opacity: .75;
+		}
+
+		.wk_option_image_uploader_container .remove-image {
+		position: absolute;
+		left: calc(100% - 12px);
+		bottom: calc(100% - 12px);
+		background: white;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: .25s ease-out;
+		}
+
+		.wk_option_image_uploader_container .remove-image:hover {
+		transform: scale(1.1);
+		}
+
+#seodiv .inside {
+	margin: 0;
+	padding: 0;
+}
+
+#seodiv label {
+	display: block;
+	font-weight: 700;
+	margin: 12px 0;
+}
+
+#seodiv input,
+#seodiv textarea,
+#seodiv select {
+	margin: 0;
+	width: 100%;
+}
+
+#seodiv [class*="wk-tabs-content-"] {
+	background-color: #f9f9f9;
+}
+
+#seodiv .wk-tabgroup {
+	background-color: #fff;
+}
+
+#seodiv .wk-tabs-list {
+    background-color: #f9f9f9;
+}
+
+#seodiv .wk-tabs-list li {
+    border-bottom: none;
+}
+
+#seodiv .wk-tabs-list li a {
+	border-bottom: 1px solid #dfdfdf;
+}
+
+#seodiv .wk-tabs-list li a:not(.active) {
+    color: #2b78aa;
+	border-right: 1px solid #dfdfdf;
+}
+
+#seodiv .wk-tabs-list li a.active {
+    color: inherit;
+}
+
+#seodiv .wk-tabgroup-row:not(:last-child) {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+#seodiv .wk-tabgroup-row {
+    padding: 10px 20px 20px;
+}

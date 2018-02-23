@@ -1,0 +1,27 @@
+#main-footer  {
+    color: $white;
+    background-color: $mainColor;
+
+    text-align: center;
+    #main-footer-top {
+        padding: 60px 0;
+        background: {
+            image: url(img/bg-footer.png);
+            size: cover;
+            position: center;
+        }
+        .social-media {
+            a {
+                display: inline-block;
+                margin: 0 8px;
+                font-size: 18px;
+                vertical-align: middle;
+            }
+        }
+    }
+    #main-footer-bottom {
+        background-color: $mainColorDark;
+        padding: 20px 0;
+    }
+
+}

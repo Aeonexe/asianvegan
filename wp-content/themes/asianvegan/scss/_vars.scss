@@ -1,0 +1,29 @@
+$mainColor: #3aae97;
+$mainColorDark: #2b544c;
+$secondaryColor: #d87d00;
+
+$colorArticulos: #a7dcd3;
+$colorRestaurantes: #e8a369;
+$colorRecetas: #ecd7d5;
+$colorRecetasComunidad: #c2e8f5;
+
+$white: #fff;
+$black: #000;
+$red: red;
+$yellow: gold;
+$brown: brown;
+$pink: #e2007c;
+$blue: blue;
+$gray: gray;
+
+$mainFont: 'Open Sans', 'Helvetica', sans-serif;
+$headersFont: 'Open Sans', sans-serif;
+
+$onlyMobile: ( max-width: 770px );
+$onlyDesktop: ( min-width: 771px );
+$onlyTablet: ( min-width: 415px ) and ( max-width: 770px );
+$onlyfromTablet: ( min-width: 415px );
+$onlyPhone: ( max-width: 414px );
+$onlyiPhone5: ( max-width: 320px );
+
+$boxModel: 20px;

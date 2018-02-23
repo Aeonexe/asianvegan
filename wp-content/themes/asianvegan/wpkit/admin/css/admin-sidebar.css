@@ -1,0 +1,146 @@
+/*
+WPKit - Dash-b
+*/
+
+/*******************************************************************************
+Admin sidebar
+*/
+
+	body {
+	min-height: 100%;
+	min-height: calc(100vh - 60px);
+	position: relative;
+	left: 0;
+	-webkit-transition: all .25s cubic-bezier(0.27, 1.36, 1, 1);
+	-moz-transition: all .25s cubic-bezier(0.27, 1.36, 1, 1);
+	-ms-transition: all .25s cubic-bezier(0.27, 1.36, 1, 1);
+	transition: all .25s cubic-bezier(0.27, 1.36, 1, 1);
+	}
+
+	body.admin-sidebar-is-showing {
+	left: -240px;
+
+	}
+
+	#wp-admin-bar-toggle_icon .ab-item {
+	cursor: pointer;
+	}
+
+	#wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item {
+		background: inherit;
+		color: inherit;
+	}
+
+	#wpkaside * {
+		color: inherit;
+	}
+
+	#wpkaside {
+	color: #fff;
+	box-sizing: border-box;
+	padding-top: 60px;
+	padding-left: 22px;
+	padding-right: 22px;
+	position: fixed;
+	width: 240px;
+	height: 100%;
+	background: #1D242A;
+	z-index: -221;
+	top: 0;
+	right: 0;
+	transform: translateX(240px);
+	transition: all .15s linear;
+	}
+
+
+	.admin-sidebar-is-showing #wpkaside {
+	transform: translateY(0);
+	}
+
+
+
+/* ***********************************************************************************************************************
+* Reordena las filas en el formulatio de opciones en Profile
+* ***********************************************************************************************************************
+*/
+
+			.wp-admin.profile-php #your-profile, .wp-admin.user-edit-php #your-profile  {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-flex-wrap: nowrap;
+			-ms-flex-wrap: nowrap;
+			flex-wrap: nowrap;
+			}
+
+/*		.wp-admin.profile-php #your-profile *:nth-child(5), .wp-admin.user-edit-php #your-profile *:nth-child(5) { order: 1; }
+		.wp-admin.profile-php #your-profile *:nth-child(6), .wp-admin.user-edit-php #your-profile *:nth-child(6) { order: 2; }
+		.wp-admin.profile-php #your-profile *:nth-child(7), .wp-admin.user-edit-php #your-profile *:nth-child(7) { order: 3; }
+		.wp-admin.profile-php #your-profile *:nth-child(8), .wp-admin.user-edit-php #your-profile *:nth-child(8) { order: 4; }
+		.wp-admin.profile-php #your-profile *:nth-child(9), .wp-admin.user-edit-php #your-profile *:nth-child(9) { order: 5; }
+		.wp-admin.profile-php #your-profile *:nth-child(10), .wp-admin.user-edit-php #your-profile *:nth-child(10) { order: 6; }
+		.wp-admin.profile-php #your-profile *:nth-child(11), .wp-admin.user-edit-php #your-profile *:nth-child(11) { order: 7; }
+		.wp-admin.profile-php #your-profile *:nth-child(17), .wp-admin.user-edit-php #your-profile *:nth-child(17) { order: 8; display: none; }
+		.wp-admin.profile-php #your-profile *:nth-child(18), .wp-admin.user-edit-php #your-profile *:nth-child(18) { order: 9; }
+		.wp-admin.profile-php #your-profile *:nth-child(14), .wp-admin.user-edit-php #your-profile *:nth-child(14) { order: 10; }
+		.wp-admin.profile-php #your-profile *:nth-child(15), .wp-admin.user-edit-php #your-profile *:nth-child(15) { order: 11; }
+		.wp-admin.profile-php #your-profile *:nth-child(16), .wp-admin.user-edit-php #your-profile *:nth-child(16) { order: 12; }
+		.wp-admin.profile-php #your-profile *:nth-child(19), .wp-admin.user-edit-php #your-profile *:nth-child(19) { order: 13; }
+		.wp-admin.profile-php #your-profile *:nth-child(12), .wp-admin.user-edit-php #your-profile *:nth-child(12) { order: 14; }
+		.wp-admin.profile-php #your-profile *:nth-child(13), .wp-admin.user-edit-php #your-profile *:nth-child(13) { order: 15; }
+		.wp-admin.profile-php #your-profile *:nth-child(20), .wp-admin.user-edit-php #your-profile *:nth-child(20) { order: 16; }
+		.wp-admin.profile-php #your-profile *:nth-child(21), .wp-admin.user-edit-php #your-profile *:nth-child(21) { order: 17; }*/
+
+
+/* ***********************************************************************************************************************
+* Override - Default en formularios
+* ***********************************************************************************************************************
+*/
+
+body,
+.wp-admin #wpwrap {
+	background-color: #e5e9ec;
+}
+/*
+		.wp-admin .wrap > h1 {
+		margin: 32px 0;
+		}
+
+		.wp-admin .form-table {
+		background-color: #fff;
+		box-sizing: border-box;
+		padding: 22px;
+		display: block;
+		}
+
+
+				.wp-admin .form-table label,
+				.wp-admin .form-table .description,
+				.wp-admin .form-table th,
+				.wp-admin .form-table select,
+				.wp-admin .form-table input,
+				.wp-admin .form-table a,
+				.wp-admin .form-table .example,
+				.wp-admin .form-table code,
+				.wp-admin .form-table span {
+				font-size: 13px;
+				color: #6F6F6F;
+				line-height: 1;
+				}
+
+.wp-core-ui .button-primary {
+background: #006dcc;
+border-color: #006dcc;
+-webkit-box-shadow: 0 1px 0 #006dcc;
+box-shadow: 0 1px 0 #006dcc;
+color: #fff;
+text-decoration: none;
+text-shadow: 0 -1px 1px #006dcc,1px 0 1px #006dcc,0 1px 1px #006dcc,-1px 0 1px #006dcc;
+}
+/**/

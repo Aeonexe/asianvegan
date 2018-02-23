@@ -1,0 +1,25 @@
+/*******************************************************************************
+Some bootstrap styles doesn´t fit 100% width wordpress, this stylesheet resets
+those styles.
+*/
+* {
+-webkit-box-sizing: initial;
+box-sizing: initial;
+}
+
+body {
+
+}
+
+label {
+line-height: inherit;
+font-weight: inherit;
+}
+
+.btn {
+padding: 5px 12px;
+}
+
+	.btn-default {
+	background-color: transparent;
+	}

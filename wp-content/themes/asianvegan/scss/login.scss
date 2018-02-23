@@ -1,0 +1,60 @@
+/*
+* Estílos para la página de login, no para el formulario
+* Solo se cargara en wp-login.php, wp-admin (sesión no iniciada)
+*/
+
+
+
+/* ***********************************************************************************************************************
+* Login page
+*/
+
+	body.login {
+	background-size: cover;
+	}
+
+	#login h1 {
+    padding: 12px 0;
+    /*box-shadow: 0px -1px 3px rgba(0,0,0,.13);*/
+    margin: 0;
+	}
+
+	#login > h1,
+	#loginform {
+	/*background: white;*/
+	}
+
+	#loginform {
+	margin: 0;
+	}
+
+	#loginform #rememberme {
+	background: transparent;
+	box-shadow: none;
+	}
+
+	#loginform #wp-submit {
+	background-color: #005dff;
+	text-shadow: none;
+	box-shadow: none;
+	border-radius: 0;
+	}
+
+	#login input[type="text"]:focus {
+	    outline: 0;
+	    box-shadow: none;
+	    border: 0;
+	}
+
+	#loginform {
+    background: none;
+    color: white;
+    font-weight: 100;
+    font-size: 11px;
+    box-shadow: none;
+	}
+
+	#loginform input:focus {
+    outline: 0;
+    cursor: text;
+	}

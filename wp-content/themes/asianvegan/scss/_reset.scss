@@ -1,0 +1,57 @@
+html, body, ul, ol, figure {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	line-height: 1.5;
+}
+
+table, form {
+	width: 100%;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul, ol {
+	list-style-position: inside;
+}
+
+strong {
+font-weight: 700;
+}
+
+.menu {
+	list-style: none;
+}
+
+
+/* Wordpress */
+
+	/*******************************************************************************
+	Calendar */
+
+
+		#wp-calendar {
+		line-height: 2.5;
+		}
+
+		    #wp-calendar caption {
+		    text-transform: capitalize;
+		    }
+
+			#wp-calendar #today {
+			background: gainsboro;
+			}
+
+			#wp-calendar td {
+			text-align: center;
+			}

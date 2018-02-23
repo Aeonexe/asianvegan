@@ -1,0 +1,240 @@
+/*
+WPKit - Dash-b
+*
+
+@import url(material-theme.css);
+
+*/
+
+/*******************************************************************************
+Theme styles
+*/
+
+	/* Content menu */
+	#wk-header-menu * {
+		text-decoration: none;
+		color: inherit;
+	}
+
+		#wk-header-menu {
+		background: gainsboro;
+		width: calc(100% + 20px);
+		position: relative;
+		left: -20px;
+		box-sizing: border-box;
+		padding: 10px 20px;height: 1;
+		}
+
+		    #wk-header-menu-items {
+		    margin: 0;
+		    }
+
+		        #wk-header-menu-items > .menu-item {
+		        display: inline;
+		        }
+
+				#wk-header-menu-items > .menu-item:not(:last-child) {
+				padding-right: 12px;
+				}
+
+				#wk-header-menu a {
+				transition: all .25s linear;
+				-webkit-transition: all .25s linear;
+				}
+
+
+				#wk-header-menu a:hover {
+				color: dodgerblue;
+				}
+	/* Dashboard */
+
+		/* Widgets */
+
+			.index-php #wpbody-content #wp-calendar {
+			width: 100%;
+			min-height: 280px;
+			}
+
+			.index-php #wpbody-content #wp-calendar td {
+			text-align: center;
+			}
+
+			.index-php #wpbody-content #wp-calendar td#today {
+			background: rgb(216, 216, 216);
+			color: white;
+			}
+
+	/* Profile */
+		.user-profile-picture {
+		display: none;
+		}
+
+/************************************************************************************************************************
+* Text
+************************************************************************************************************************/
+
+	.description {
+	font-size: 11px !important;
+	font-style: initial !important;
+	opacity: .75;
+	}
+
+/************************************************************************************************************************
+* UI
+************************************************************************************************************************/
+	a {
+	color: dodgerblue;
+	}
+
+	input[type=text]:focus, 
+	input[type=search]:focus, 
+	input[type=radio]:focus, 
+	input[type=tel]:focus, 
+	input[type=time]:focus, 
+	input[type=url]:focus,
+	input[type=week]:focus, 
+	input[type=password]:focus, 
+	input[type=checkbox]:focus, 
+	input[type=color]:focus, 
+	input[type=date]:focus, 
+	input[type=datetime]:focus, 
+	input[type=datetime-local]:focus, 
+	input[type=email]:focus, 
+	input[type=month]:focus, 
+	input[type=number]:focus, 
+	select:focus, 
+	textarea:focus {
+		border-color: dodgerblue;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+	input[type=text], 
+	input[type=search], 
+	input[type=tel], 
+	input[type=time], 
+	input[type=url], 
+	input[type=week], 
+	input[type=password], 
+	input[type=checkbox], 
+	input[type=color], 
+	input[type=date], 
+	input[type=datetime], 
+	input[type=datetime-local], 
+	input[type=email],
+	input[type=month], 
+	input[type=number], 
+	select, 
+	textarea {
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		border-radius: 3px;
+	}
+
+/* ***********************************************************************************************************************
+* .wrap
+* ***********************************************************************************************************************/
+
+	.wrap > h1 {
+	    margin-bottom: 12px;
+	}
+
+	.wrap > h1:first-child:before {
+	content: "\f190";
+	font-family: FontAwesome;
+	font-size: 28px;
+	color: #626262;
+	margin-right: 6px;
+	position: relative;
+	top: 3px;
+	}
+
+	.postbox {
+	    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+	    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+	}
+
+/* ***********************************************************************************************************************
+* Edit post page
+* ***********************************************************************************************************************/
+	
+	#wp-content-editor-tools {
+	    background-color: transparent
+	}
+
+/* ***********************************************************************************************************************
+* Post tables .wp-list-table
+* ***********************************************************************************************************************/
+
+	.wp-list-table {
+	margin-top: 16px;
+	}
+
+		.wp-list-table input[type="text"], 
+		.wp-list-table select {
+		font-weight: 400 !important;
+		}
+	
+		.striped>tbody>:nth-child(odd) {
+		background-color: transparent;
+		}
+
+		.striped>tbody tr th, .striped>tbody tr td {
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+		}
+
+		.striped>tbody tr th, .striped>tbody tr td:not(.column-title) {
+		vertical-align: middle;
+		}
+
+
+		.check-column input {
+		box-shadow: none;
+		border-radius: 3px;
+		}
+
+		@media screen and (max-width: 782px) {
+			input[type=radio], input[type=checkbox] {
+				height: 16px !important;
+				width: 16px !important;
+			}
+		}
+
+		#the-list td, 
+		#the-list th,
+		#the-list a, 
+		#the-list .post-state {
+		font-size: 11px !important;
+		color: rgb(116, 110, 110);
+		font-weight: 500;
+		}
+
+		.comment-count-approved {
+		background-color: dodgerblue !important;
+		height: 14px !important;
+		min-width: 16px !important;
+		width: 16px !important;
+		padding: 0px 0 !important;
+		line-height: 1.5 !important;
+		border-radius: 2px !important;
+		font-size: 8px !important;
+		font-weight: 700;
+		}
+
+
+		.post-com-count-approved:after {
+		border-top: 6px solid dodgerblue !important;
+		}
+
+		.row-actions {
+		position: static;
+		opacity: 0;
+		-webkit-transition: all .15s linear;
+		transition: all .15s linear;
+		}
+
+
+
+		tr:hover .row-actions {
+		opacity: 1 !important;
+		}

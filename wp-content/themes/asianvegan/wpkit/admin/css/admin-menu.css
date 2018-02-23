@@ -1,0 +1,361 @@
+/*
+WPKit - Dash-b
+*/
+
+/*******************************************************************************
+Admin menu
+*/
+
+	/* Readjust width y padding */
+		#adminmenu,
+		#adminmenu .wp-submenu,
+		#adminmenuback,
+		#adminmenuwrap,
+		#adminmenu .wp-has-current-submenu .wp-submenu {
+		width: 240px;
+		color: #fff;
+		font-weight: 100;
+		margin: 0;
+		}
+
+		/* Current menu has submenu */
+		#adminmenu .wp-has-current-submenu .wp-submenu	 {
+		background-color: rgba( 0,0,0,0.05) !important;
+		}
+
+		.wp-has-current-submenu:hover {
+	    background-color: transparent !important;
+		}
+
+		.wp-has-current-submenu .wp-submenu li:hover {
+	    background-color: rgba(255, 255, 255, 0.1);
+		}
+
+		/* Admin menu back --*
+		#adminmenu,
+		#adminmenu .wp-submenu,
+		#adminmenuback,
+		#adminmenuwrap,
+		#adminmenu .wp-has-current-submenu .wp-submenu {
+		background-color: #1d242a;
+		}
+
+		/* Current menu -- *
+		#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
+	    background-color: #005eef !important;
+		}
+
+		/* Text & icon -- *
+		#adminmenu,
+		#adminmenu .wp-menu-name,
+		#adminmenu div.wp-menu-image:before,
+		#adminmenu .wp-submenu a {
+		color: #fff !important;
+		}
+
+			/* Arrow indicator current menu -- *
+			#adminmenu > .wp-has-submenu.wp-not-current-submenu:after {
+			border-color: #fff;
+			}
+
+		/**/
+
+		#adminmenu a,
+		#wk-menu-user-meta,
+		#adminmenu div.wp-menu-image:before,
+		#collapse-button,
+		#wk-quick-tag input[type="text"],
+
+		#adminmenu .wp-submenu a,
+		#adminmenu .opensub .wp-submenu li.current a,
+		#adminmenu .wp-submenu li.current,
+		#adminmenu .wp-submenu li.current a,
+		#adminmenu .wp-submenu li.current a:focus,
+		#adminmenu .wp-submenu li.current a:hover,
+		#adminmenu a.wp-has-current-submenu:focus+.wp-submenu li.current a {
+			color: inherit;
+		}
+
+		#adminmenu a {
+		opacity: 1;
+		}
+
+		#adminmenu div.wp-menu-image:before {
+	    font-size: 12px;
+		}
+
+		#usersidedeckwrap,
+		#adminmenu a.menu-top,
+		#adminmenu .wp-submenu li,
+		#adminmenu #collapse-menu,
+		#adminmenu .wk-not-menu-item {
+		font-weight: inherit;
+		}
+
+		#wpcontent, #wpfooter {
+		margin-left: 240px;
+		}
+
+
+		@media ( min-width: 960px ) {
+			#usersidedeckwrap,
+			#adminmenu li.menu-top > a,
+			#adminmenu li.wk-not-menu-item,
+			/*#adminmenu li.menu-top .wp-submenu li,*/
+			#collapse-menu {
+			box-sizing: border-box;
+			padding-left: 12px !important;
+			padding-right: 12px !important;
+			}
+
+			#adminmenu .menu-top-first .wp-submenu-wrap li > a {
+			padding-left: 48px !important;
+			opacity: .9;
+			}
+		}
+
+		#adminmenu .wp-submenu {
+		left: 240px;
+		}
+
+			#adminmenu .wp-submenu * {
+			font-size: 12px !important;
+			}
+
+		body.folded #usersidedeckwrap,
+		body.folded #adminmenu li.menu-top a,
+		body.folded #adminmenu li.wk-not-menu-item,
+		body.folded #adminmenu li.menu-top .wp-submenu li,
+		body.folded #collapse-menu {
+		box-sizing: border-box;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		}
+
+	#usersidedeckwrap,
+	#adminmenu a.menu-top,
+	#adminmenu .wp-submenu li,
+	#adminmenu #collapse-menu,
+	#adminmenu .wk-not-menu-item {
+	font-size: 12px;
+	line-height: 1;
+	}
+
+	#usersidedeckwrap {
+	position: relative;
+	margin-bottom: 26px !important;
+	}
+
+		/* Edit profile icon */
+
+			#wk-menu-edit-profile {
+			position: absolute;
+			right: 6px;
+			top: 6px;
+			}
+
+				#wk-menu-edit-profile .icon:before {
+				font-size: 12px;
+				opacity: .5;
+				}
+
+		/* User meta block*/
+
+			#wk-menu-user-dashboard {
+			line-height: 1;
+			height: 64px;
+			margin-top: 28px;
+			display: flex;
+			align-items: center;
+			}
+
+			    #wk-menu-user-avatar {
+			    float: left;
+			    width: 64px;
+				height: 64px;
+			    }
+
+					#wk-menu-user-avatar .avatar {
+					border-radius: 100px;
+					width: 64px;
+					height: 64px;
+					display: block;
+					background-size: cover;
+					background-position: center;
+					}
+
+			    #wk-menu-user-meta {
+    			padding-left: 16px;
+    			float: right;
+			    width: 60%;
+			    box-sizing: border-box;
+			    }
+
+				#wk-menu-user-meta #wk-greet,
+				#wk-menu-user-meta #wk-display-name,
+				#wk-menu-user-meta #wk-role {
+				display: block;
+				}
+
+				#wk-menu-user-meta #wk-greet {
+				font-size: 16px;
+				font-weight: 400;
+				opacity: .5;
+				}
+
+				#wk-menu-user-meta #wk-display-name {
+				font-size: 16px;
+				font-weight: bold;
+				letter-spacing: -.03em;
+				text-transform: capitalize;
+				}
+
+				#wk-menu-user-meta #wk-role {
+				font-size: 9px;
+				opacity: .5;
+				}
+
+			/* Today */
+
+				#wk-today {
+				margin: 22px 0;
+				width: 100%;
+				}
+
+					#wk-today tr td {
+					text-transform: uppercase;
+					font-size: 10px;
+					}
+
+					#wk-today tr td:last-child {
+					text-align: right;
+					}
+
+
+		/* Folded */
+
+			body.folded #wk-menu-edit-profile,
+			body.folded #wk-menu-user-meta,
+			body.folded #wk-today,
+			body.folded #wk-logout-link,
+			body.folded #wk-quick-tag {
+			display: none;
+			}
+
+			@media all and (max-width: 960px) {
+				#wk-menu-edit-profile,
+				#wk-menu-user-meta,
+				#wk-today,
+				#wk-logout-link,
+				#wk-quick-tag {
+				display: none;
+				}
+
+				#wk-menu-user-dashboard .avatar {
+				width: 22px;
+				height: 22px;
+				}
+			}
+
+			body.folded #usersidedeckwrap {
+			padding: 0 0px !important;
+			display: flex;
+			justify-content: center;
+			}
+
+			body.folded #wk-menu-user-dashboard .avatar {
+			width: 22px;
+			height: 22px;
+			}
+
+	/* Quick Tag - Nota rápida */
+		#wk-quick-tag {
+		padding-top: 22px !important;
+		}
+
+			#wk-quick-tag input[type="text"] {
+				width: 95%;
+				box-sizing: border-box;
+				margin-left: 5%;
+				background-color: transparent;
+				border: 0;
+				border-bottom-width: 1px;
+				border-bottom-color: rgba(132, 132, 132, 0.29);
+				border-bottom-style: solid;
+				border-radius: 0;
+				-webkit-transition: all .15s ease-out;
+						transition: all .15s ease-out;
+			}
+
+				#wk-quick-tag:before {
+				content: "";
+				display: inline-block;
+				float: left;
+				width: 5px;
+				height: 5px;
+				background: deeppink;
+				position: relative;
+				top: 19px;
+				}
+
+			#wk-quick-tag input[type="text"]:focus {
+			box-shadow: none;
+			border-bottom-color: #fff;
+			}
+
+	/* Top level menus */
+		/* Pointer */
+			#adminmenu > .wp-has-submenu.wp-not-current-submenu:after {
+			font-family: dashicons;
+			content: "";
+			position: absolute;
+			right: 12px;
+			top: 10px;
+			width: 6px;
+			height: 6px;
+			background: transparent;
+			/*border-color: rgba(255, 255, 255, 0.45);*/
+			border-width: 1px;
+			border-style: solid;
+			border-right: 0;
+			border-bottom: 0;
+			transform: rotate(-45deg);
+			transition: all .25s linear;
+			}
+
+			#adminmenu li.wp-has-submenu.wp-not-current-submenu:hover:after {
+			right: 12px;
+			border-color: rgba(255, 255, 255, 0.45);
+			border-width: 1px;
+			border-style: solid;
+			border-right: 0;
+			border-bottom: 0;
+			content: " ";
+			height: 6px;
+			width: 6px;
+			position: absolute;
+			top: 10px;
+			z-index: 10000;
+			}
+
+			#adminmenu > .wp-has-submenu.menu-is-showing:after {
+			transform: rotate(-135deg);
+			}
+
+/* Input search Codex */
+	.folded #search-codex,
+	.auto-fold #search-codex {
+	display: none;
+	}
+
+	#search-codex input[type="text"] {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(256,256,256,.2);
+	}
+
+	#search-codex input.button {
+    border: 0 !important;
+    outline: 0;
+    background: 0;
+	}

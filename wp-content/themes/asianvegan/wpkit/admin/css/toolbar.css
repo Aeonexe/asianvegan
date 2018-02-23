@@ -1,0 +1,81 @@
+/*
+WPKit - Dash-b
+*/
+
+/*******************************************************************************
+Toolbar
+* This applys both admin panel and site
+*/
+
+/* Toolbar */
+
+	#wpadminbar {
+	background-color: #FFF;
+	color: #000;
+	height: 60px;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+	position: fixed;
+	}
+
+		/* Toolbar labels */
+		#wpadminbar .ab-empty-item,
+		#wpadminbar a.ab-item,
+		#wpadminbar>#wp-toolbar span.ab-label,
+		#wpadminbar>#wp-toolbar span.noticon,
+		/* Toolbar Icons */
+		#wpadminbar #adminbarsearch:before,
+		#wpadminbar .ab-icon:before,
+		#wpadminbar .ab-item:before {
+			color: inherit;
+		}
+
+		/* Toolbar Icons */
+		#wpadminbar #adminbarsearch:before,
+		#wpadminbar .ab-icon:before,
+		#wpadminbar .ab-item:before {
+			opacity: .9;
+		}
+
+		/* Logo */
+		#wp-admin-bar-site-logo {
+		padding: 0px 12px !important;
+		}
+
+		/* Toolbar each link */
+		#wpadminbar .quicklinks .ab-empty-item,
+		#wpadminbar .quicklinks a,
+		#wpadminbar .shortlink-input {
+		height: 60px;
+		display: flex;
+		align-items: center;
+		}
+
+
+		/* Toolbar each link on hover */
+		#wpadminbar .ab-top-menu>li.hover>.ab-item,
+		#wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus,
+		#wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item,
+		#wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
+		background: #fafafa;
+		color: inherit;
+		}
+
+		/* Avatar & user info */
+
+		#wpadminbar .avatar-32 {
+	    max-width: 32px;
+		}
+
+		#wpadminbar .avatar-64 {
+		max-width: 64px;
+		}
+
+		#wp-admin-bar-my-account .avatar {
+			width: 32px !important;
+			height: 32px !important;
+			border: none !important;
+			background-size: cover;
+			border-radius: 100px;
+			margin-left: 10px;
+			background-position: center;
+		}
