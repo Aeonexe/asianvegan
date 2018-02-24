@@ -1,15 +1,18 @@
 #main-footer  {
     color: $white;
     background-color: $mainColor;
+    background: {
+        image: url(img/bg-footer.png);
+        size: cover;
+        position: center;
+    }
 
     text-align: center;
     #main-footer-top {
         padding: 60px 0;
-        background: {
-            image: url(img/bg-footer.png);
-            size: cover;
-            position: center;
-        }
+        max-width: 690px;
+        margin: auto;
+
         .logo {
             width: 100%;
             max-width: 650px;
@@ -28,4 +31,37 @@
         padding: 40px 0 0;
     }
 
+}
+
+.frm_fields_container {
+    display: flex !important;
+    align-items: center;
+    margin: 30px 0 0;
+    > * {
+        flex: 1;
+    }
+    .ui-button-holder {
+        display: flex;
+    }
+    button {
+        background-color: tomato;
+        height: 50px;
+    }
+}
+
+.frm_fields_container input {
+    width: 100% !important;
+    max-width: 96% !important;
+    display: inline-block;
+    height: 50px;
+    padding: 12px;
+    color: gray;
+}
+
+.frm_form_field {
+    width: 33.33% !important;
+}
+
+fieldset {
+    border: 0;
 }

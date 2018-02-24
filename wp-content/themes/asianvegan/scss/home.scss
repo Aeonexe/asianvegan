@@ -1,9 +1,9 @@
 #feed-articulos-featured {
     padding: 0;
-    color: #fff;
     .post {
         background-color: #000;
         min-height: 460px;
+        color: #fff;
         @media #{$onlyMobile} {
             min-height: 160px;
         }

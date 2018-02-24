@@ -608,6 +608,7 @@ add_theme_support( 'custom-background' );
 				'post_type' 	=> 'post',
 				'category_name'	=> $category,
 				'posts_per_page'=> $posts_per_page,
+
 			);
 
 			$wp_query = new WP_Query( $args );
@@ -653,6 +654,7 @@ add_theme_support( 'custom-background' );
 				'post_type' 	=> 'post',
 				'category_name'	=> $category,
 				'posts_per_page'=> $posts_per_page,
+				'orderby'        => 'rand',
 			);
 
 			$wp_query = new WP_Query( $args );
@@ -728,3 +730,14 @@ function set_my_comment_title( $defaults ){
   $defaults['title_reply'] = __('Custom leave a comment', 'customizr-child');
   return $defaults;
 }
+
+
+
+//
+function custom_blockusers_init() {
+  if ( is_user_logged_in() && is_admin() && !current_user_can( 'administrator' ) ) {
+    wp_redirect( home_url() );
+    exit;
+  }
+}
+add_action( 'init', 'custom_blockusers_init' );

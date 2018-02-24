@@ -26,7 +26,16 @@
 
 							<div class="wk-col absolute-left">
 
-								<a href="#">Iniciar sesión</a>
+								<?php if( is_user_logged_in() ) : ?>
+
+									<a href="<?php echo wp_logout_url(); ?>">Cerrar sesión</a>
+
+								<?php else : ?>
+
+									<a href="<?php echo wp_login_url(); ?>">Iniciar sesión</a>
+
+								<?php endif; ?>
+
 
 							</div>
 
