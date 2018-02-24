@@ -16,20 +16,20 @@
 
 // ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
 /** El nombre de tu base de datos de WordPress */
-define('DB_NAME', 'airmedia_asianvegan');
-//define('DB_NAME', 'codecase_asianvegan');
+//define('DB_NAME', 'airmedia_asianvegan');
+define('DB_NAME', 'codecase_asianvegan');
 
 /** Tu nombre de usuario de MySQL */
-define('DB_USER', 'root');
-//define('DB_USER', 'codecase_asian');
+//define('DB_USER', 'root');
+define('DB_USER', 'codecase_asian');
 
 /** Tu contraseña de MySQL */
-define('DB_PASSWORD', '');
-//define('DB_PASSWORD', 'CaPri1@*.$');
+//define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'CaPri1@*.$');
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
-define('DB_HOST', 'localhost');
-//define('DB_HOST', '166.62.103.223:3306');
+//define('DB_HOST', 'localhost');
+define('DB_HOST', '166.62.103.223:3306');
 
 /** Codificación de caracteres para la base de datos. */
 define('DB_CHARSET', 'utf8mb4');
