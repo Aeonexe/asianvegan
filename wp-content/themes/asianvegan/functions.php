@@ -29,11 +29,11 @@ WPKit */
 		 	'position'		=> '4',
 		));
 
-		// acf_add_options_sub_page(array(
-		// 	'page_title' 	=> 'Herramientas',
-		// 	'menu_title'	=> 'Herramientas',
-		// 	'parent_slug'	=> 'opciones-de-panel',
-		// ));
+		acf_add_options_sub_page(array(
+			'page_title' 	=> 'Slider',
+			'menu_title'	=> 'Slider',
+			'parent_slug'	=> 'oopciones-de-homepage',
+		));
 
 		// acf_add_options_sub_page(array(
 		// 	'page_title' 	=> 'Homepage',
@@ -597,6 +597,10 @@ function acf_initmap() {
 
 add_action('acf/init', 'acf_initmap');
 
+// theme supports background
+
+add_theme_support( 'custom-background' );
+
 // Query posts feed homepage
 	function wpkit_query_home_posts( $category, $posts_per_page ) {
 
@@ -615,15 +619,18 @@ add_action('acf/init', 'acf_initmap');
 
 					<?php $i = 0; while( $wp_query->have_posts() ) : $i++; $wp_query->the_post(); ?>
 
+						<?php $image_url = wp_get_attachment_url( get_post_thumbnail_id() ); ?>
+
 						<div class="wk-col-3">
 
 							<article class="post <?php if( $i === 1 ) : ?>first-post<?php endif; ?> <?php if( $i === $posts_per_page ) : ?>last-post<?php endif; ?>">
 
-								<figure class="feed-thumbnail">
-									<?php echo get_the_post_thumbnail(); ?>
-								</figure>
+								<a href="<?php the_permalink(); ?>">
+									<span class="feed-thumbnail" style="background-image: url(<?php echo $image_url; ?>);">
+									</span>
 
-								<h1 class="ui-feed-title"><?php the_title(); ?></h1>
+									<h1 class="ui-feed-title"><?php the_title(); ?></h1>
+								</a>
 
 							</article>
 
@@ -660,18 +667,19 @@ add_action('acf/init', 'acf_initmap');
 
 							<article class="post">
 
-								<div class="post-bg" style="background-image: url(<?php echo $feat_image_url; ?>);">
+								<a href="<?php the_permalink(); ?>">
 
+									<div class="post-bg" style="background-image: url(<?php echo $feat_image_url; ?>);"></div>
 
+									<div class="post-meta">
 
-								</div>
+										<h1 class="ui-title-small"><?php the_title(); ?></h1>
+										<span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
 
-								<div class="post-meta">
+									</div>
 
-									<h1 class="ui-title-small"><?php the_title(); ?></h1>
-									<?php the_date( 'M, Y'); ?>
+								</a>
 
-								</div>
 
 							</article>
 
@@ -685,3 +693,38 @@ add_action('acf/init', 'acf_initmap');
 			endif;
 
 	}
+
+// WIdgets widget area widgetized
+
+function wpkit_widget_sidebar() {
+		register_sidebar(array(
+			'name'			=> 'Sidebar',
+			'id' 			=> 'wpkit-widget-sidebar',
+			'description'   => __( '' ),
+			'before_widget' => '<div id="wk-widget-absolute-left-%1$s" class="wk-widget-area">',
+			'after_widget' 	=> '</div>',
+			'before_title' 	=> '<h3 style="display: none;">',
+			'after_title' 	=> '</h3>',
+		));
+	}
+
+	add_action( 'widgets_init', 'wpkit_widget_sidebar' );
+
+// social media redes sociales
+
+function wpkit_social_media() {
+
+	if( have_rows( 'wpkit_social_media', 'option' ) ) : while( have_rows( 'wpkit_social_media', 'option' ) ) : the_row(); ?>
+
+		<a href="<?php the_sub_field( 'wpkit_social_media_red', 'option' ); ?>"><span class="fa fa-<?php the_sub_field( 'wpkit_social_media_icon', 'option' ); ?>"></span></a>
+
+	<?php endwhile; endif;
+}
+
+
+
+add_filter('comment_form_defaults', 'set_my_comment_title', 20);
+function set_my_comment_title( $defaults ){
+  $defaults['title_reply'] = __('Custom leave a comment', 'customizr-child');
+  return $defaults;
+}

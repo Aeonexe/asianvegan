@@ -19,6 +19,14 @@ jQuery(document).ready(function($){
 	});
 
 
+	// Slick slide
+	$('.slider').slick({
+		dots: true,
+		arrows: false,
+		//variableWidth: true,
+	});
+
+
 
 
 });

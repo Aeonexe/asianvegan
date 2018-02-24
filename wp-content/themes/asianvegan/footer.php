@@ -1,4 +1,6 @@
-			<?php
+				</main>
+
+				<?php
 
 				/*
 				* Layout de widgets
@@ -16,7 +18,7 @@
 
 					<div id="main-footer-top">
 
-						<img src="<?php if( get_option('wk_custom_logo_main') ) : echo get_option('wk_custom_logo_main'); endif; ?>">
+						<img class="logo" src="<?php if( get_option('wk_custom_logo_main') ) : echo get_option('wk_custom_logo_main'); endif; ?>">
 
 						<div class="newsletter">
 
@@ -37,14 +39,7 @@
 
 							<label>Síguenos en:</label>
 
-							<?php if( have_rows( 'wpkit_social_media', 'option' ) ) : while( have_rows( 'wpkit_social_media', 'option' ) ) : the_row(); ?>
-
-								<a href="<?php the_sub_field( 'wpkit_social_media_red', 'option' ); ?>"><span class="fa fa-<?php the_sub_field( 'wpkit_social_media_icon', 'option' ); ?>"></span></a>
-
-								<?php //the_sub_field( 'wpkit_social_media_icon' ); ?>
-
-							<?php endwhile; endif; ?>
-
+							<?php wpkit_social_media(); ?>
 
 						</div>
 
@@ -63,6 +58,9 @@
 	</body>
 
 	<?php wp_footer(); ?>
+
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/slick/slick.css">
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/slick/slick.min.js"></script>
 
 	<style type="text/css">
 

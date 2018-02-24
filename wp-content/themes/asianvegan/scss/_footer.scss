@@ -10,18 +10,22 @@
             size: cover;
             position: center;
         }
-        .social-media {
-            a {
-                display: inline-block;
-                margin: 0 8px;
-                font-size: 18px;
-                vertical-align: middle;
-            }
+        .logo {
+            width: 100%;
+            max-width: 650px;
+            padding: 20px;
         }
+
     }
     #main-footer-bottom {
         background-color: $mainColorDark;
         padding: 20px 0;
+        font-size: 12px;
+    }
+    font-size: 116%;
+    line-height: .75;
+    .social-media {
+        padding: 40px 0 0;
     }
 
 }

@@ -13,100 +13,127 @@
 
 get_header(); ?>
 
-	<main>
+	<section class="wk-section-wrap" id="main-slider">
 
-		<section  class="wk-section-wrap" id="feed-articulos-featured">
+		<div class="slider">
 
-			<div class="wk-cols">
+			<?php if( have_rows( 'wpkit_slider', 'option' ) ) : ?>
 
-				<div class="wk-col">
+				<?php while( have_rows( 'wpkit_slider', 'option' ) ) : the_row(); ?>
 
-					<?php wpkit_query_home_posts_cat( 'articulos', 1 ); ?>
+					<div class="slide">
 
-				</div>
+						<img class="bg" src="<?php the_sub_field( 'wpkit_slide', 'option' ); ?>">
+						<a class="ui-button wk-button" href="<?php the_sub_field( 'wpkit_button_link', 'option' ); ?>" <?php if( get_sub_field( 'wpkit_button_target', 'option' ) ) : ?>target="_blank"<?php endif; ?>><?php the_sub_field( 'wpkit_button_text', 'option' ); ?></a>
 
-				<div class="wk-col">
+					</div>
 
-					<?php wpkit_query_home_posts_cat( 'restaurantes', 1 ); ?>
+				<?php endwhile; ?>
 
-				</div>
+			<?php endif; ?>
 
-				<div class="wk-col">
+		</div>
 
-					<?php wpkit_query_home_posts_cat( 'recetas', 1 ); ?>
+	</section>
 
-				</div>
+	<section  class="wk-section-wrap" id="feed-articulos-featured">
 
-				<div class="wk-col">
+		<div class="wk-cols">
 
-					<?php wpkit_query_home_posts_cat( 'recetas-de-la-comunidad', 1 ); ?>
+			<div class="wk-col">
 
-				</div>
-
-			</div>
-
-		</section>
-
-		<section id="feed-articulos" class="wk-section-wrap">
-
-			<div class="wk-cols">
-
-				<div class="wk-col-6">
-
-					<section class="posts" id="articulos">
-
-						<h3 class="ui-title-small">Artículos</h3>
-
-						<hr class="ui-articulos">
-
-						<?php wpkit_query_home_posts( 'articulos', 3 ); ?>
-
-					</section>
-
-					<section class="posts reveal" id="restaurantes">
-
-						<h3 class="ui-title-small">Restaurantes</h3>
-
-						<hr class="ui-restaurantes">
-
-						<?php wpkit_query_home_posts( 'restaurantes', 3 ); ?>
-
-					</section>
-
-					<section class="posts reveals" id="recetas">
-
-						<h3 class="ui-title-small">Recetas</h3>
-
-						<hr class="ui-recetas">
-
-						<?php wpkit_query_home_posts( 'recetas', 3 ); ?>
-
-					</section>
-
-					<section class="posts reveals" id="recetas-de-comunidad">
-
-						<h3 class="ui-title-small">Recetas de la comunidad</h3>
-
-						<hr class="ui-recetas-comunidad">
-
-						<?php wpkit_query_home_posts( 'recetas-de-la-comunidad', 3 ); ?>
-
-					</section>
-
-				</div>
-
-				<div class="wk-col-2">
-
-					<aside class="sidebar-single">
-
-					</aside>
-
-				</div>
+				<?php wpkit_query_home_posts_cat( 'articulos', 1 ); ?>
 
 			</div>
 
-		</section>
+			<div class="wk-col">
 
-	</main>
+				<?php wpkit_query_home_posts_cat( 'restaurantes', 1 ); ?>
+
+			</div>
+
+			<div class="wk-col">
+
+				<?php wpkit_query_home_posts_cat( 'recetas', 1 ); ?>
+
+			</div>
+
+			<div class="wk-col">
+
+				<?php wpkit_query_home_posts_cat( 'recetas-de-la-comunidad', 1 ); ?>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<section id="feed-articulos" class="wk-section-wrap">
+
+		<div class="wk-cols">
+
+			<div class="wk-col-6">
+
+				<section class="posts" id="articulos">
+
+					<h3 class="ui-title-small">Artículos</h3>
+
+					<hr class="ui-articulos">
+
+					<?php wpkit_query_home_posts( 'articulos', 3 ); ?>
+
+				</section>
+
+				<section class="posts reveal" id="restaurantes">
+
+					<h3 class="ui-title-small">Restaurantes</h3>
+
+					<hr class="ui-restaurantes">
+
+					<?php wpkit_query_home_posts( 'restaurantes', 3 ); ?>
+
+				</section>
+
+				<section class="posts reveal" id="recetas">
+
+					<h3 class="ui-title-small">Recetas</h3>
+
+					<hr class="ui-recetas">
+
+					<?php wpkit_query_home_posts( 'recetas', 3 ); ?>
+
+				</section>
+
+				<section class="posts reveal" id="recetas-de-comunidad">
+
+					<h3 class="ui-title-small">Recetas de la comunidad</h3>
+
+					<hr class="ui-recetas-comunidad">
+
+					<?php wpkit_query_home_posts( 'recetas-de-la-comunidad', 3 ); ?>
+
+				</section>
+
+			</div>
+
+			<div class="wk-col-2">
+
+				<aside class="sidebar-single">
+
+					<?php if( dynamic_sidebar( 'wpkit-widget-sidebar' ) ) : endif; ?>
+
+				</aside>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<section class="wk-section-wrap" id="video-playlist">
+
+		​<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL474LruqQPTb5LMAuOOnH_Cm9r3dggGFy&showinfo=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+	</section>
 
 <?php get_footer(); ?>

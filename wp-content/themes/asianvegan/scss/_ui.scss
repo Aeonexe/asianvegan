@@ -78,15 +78,16 @@
 // Btn
 .ui-btn,
 .ui-button {
-	font-weight: 700;
-	font-size: 16px;
+	font-weight: 400;
+	font-size: 14px;
 	text-transform: uppercase;
-	color: $white;
-	background-color: $blue;
-	padding: 18px 60px;
+	color: #fff;
+	background-color: $mainColor;
+	padding: 10px 30px;
 	display: inline-block;
+	border-radius: 0;
 	&:hover {
-	    background-color: $gray;
+	    background-color: $mainColorDark;
 	}
 }
 
@@ -110,7 +111,8 @@
 }
 .ui-title-small { font-size: 16px; font-weight: 700; text-transform: uppercase;  letter-spacing: .1em; }
 .ui-title-big {
-	font-size: 70px;
+	font-size: 60px;
+	text-transform: uppercase;
 	@media #{$onlyMobile} { font-size: 36px; }
 }
 
@@ -124,6 +126,8 @@
 }
 .ui-feed-title {
 	font-size: 16px;
+    margin-top: 6px;
+    font-weight: 400;
 }
 
 

@@ -11,16 +11,18 @@ License: © Copyright Alumin.Agency All rights reserved
 @import '_reset.scss';
 @import '_vars.scss';
 @import '_mixins.scss';
+@import 'libraries/wpkit.scss';
 @import '_ui.scss';
 @import '_menu.scss';
 @import '_header.scss';
 @import '_footer.scss';
 @import 'home.scss';
+@import 'slider.scss';
+@import 'sidebar.scss';
 
 body {
 	font-family: 'Open sans', 'arial', sans-serif;
 	font-size: 13px;
-	font-weight: 100;
 	color: #000;
 	background-color: #eee;
 	transition: all .25s linear;
@@ -34,12 +36,61 @@ body {
 	}
 
 
-.reveal {
-	transition: .25s linear;
-	transform: translateY(100px);
-	opacity: 0;
-	&.toTop {
-		transform: translateY(0px);
-		opacity: 1;
+// .reveal {
+// 	transition: .25s linear;
+// 	transform: translateY(100px);
+// 	opacity: 0;
+// 	&.toTop {
+// 		transform: translateY(0px);
+// 		opacity: 1;
+// 	}
+// }
+
+
+.post-date {
+    text-transform: capitalize;
+}
+
+.social-media {
+    a {
+        display: inline-block;
+        margin: 0 8px;
+        font-size: 18px;
+        vertical-align: middle;
+    }
+}
+
+@media #{$onlyDesktop} {
+	main {
+		box-sizing: border-box;
+    	padding: 0 30px;
+	}
+}
+
+
+article.post {
+	font-size: 18px;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.74);
+	.attachment {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.article-footer * {
+    width: 100%;
+	span.required {
+		display: inline;
+	}
+
+	.formulario input {
+		height: 40px;
+		&#enviar {
+			width: initial;
+		}
+	}
+	.comment-form-url {
+	    display: none;
 	}
 }

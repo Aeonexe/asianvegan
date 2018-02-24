@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
 *
 *  Sobreescribe el listado y formulario de comentarios.
@@ -68,15 +68,15 @@ if ( post_password_required() ) {
 		comment_form( array(
 			'id_form' 				=> 'comentarios',
 			'class_form' 			=> 'formulario',
-			'id_submit'  			=> 'enviar',                  
+			'id_submit'  			=> 'enviar',
 			'logged_in_as' 			=> '',
-			'class_submit'  		=> 'wk-button',
-			'title_reply'			=> 'Inicia una conversación',                  
-			'title_reply_before'	=> '<h2>',
+			'class_submit'  		=> 'wk-button ui-button',
+			'title_reply'			=> 'DEJA TU COMENTARIO',
+			'title_reply_before'	=> '<h2 class="ui-title-small">',
 			'title_reply_after' 	=> '</h2>',
 			'comment_notes_before' 	=> '', //solo se muestra para usuarios sin loggin
 			'comment_field' 		=> '<label for="comment">Comentario</label><br /><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>',
 			'comment_notes_after' 	=> '<p class="form-allowed-tags">Puedes usar HTML</p>',
-			'label_submit'			=>'Enviar comentario',
+			'label_submit'			=>'Comentar',
 		) );
 	?>

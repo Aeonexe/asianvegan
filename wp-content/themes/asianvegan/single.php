@@ -13,111 +13,132 @@
 
 get_header(); ?>
 
-<?php if ( is_preview()) : ?><div class="site-notice"><?php echo edit_post_link('Regresa a editar'); ?></div><?php endif; ?>
+	<?php if ( is_preview()) : ?><div class="site-notice"><?php echo edit_post_link('Regresa a editar'); ?></div><?php endif; ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-		<div class="wk-cols">
+		<section class="wk-section-wrap">
 
-			<div class="wk-col-6">
+			<div class="wk-cols">
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class('wk-padding-22'); ?>>
+				<div class="wk-col-6">
 
-					<?php if( ! post_password_required() ) : ?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('wk-padding-22'); ?>>
 
-						<h1 class="ui-title"><?php the_title(); ?></h1>
+						<?php if( ! post_password_required() ) : ?>
 
-						<?php if ( has_post_thumbnail() ) : ?>
+							<h1 class="ui-title-big"><?php the_title(); ?></h1>
 
-							<?php
+							<?php if ( has_post_thumbnail() ) : ?>
+
+								<?php
 
 								$featured_img_id = get_post_thumbnail_id($post->id);
 								$featured_img_large_attr = wp_get_attachment_image_src( $featured_img_id, 'medium' );
 								$featured_img_thumb_attr = wp_get_attachment_image_src( $featured_img_id, 'thumbnail' );
 								$featured_img_alt = get_post_meta($featured_img_id, '_wp_attachment_image_alt', true);
 
-							?>
+								?>
 
-							<section class="article-header">
+								<section class="article-header">
 
-								<a class="attachment fancybox-thumb" href="<?php echo $featured_img_large_attr[0]; ?>" title="<?php the_title_attribute( 'echo=0' ); ?>">
-									<figure>
-										<img src="<?php echo $featured_img_large_attr[0]; ?>" width="<?php echo $featured_img_large_attr[1];?>" height="<?php echo $featured_img_large_attr[2];?>" class="attachment" title="<?php echo get_the_title( $featured_img_large_attr ); ?>" alt="<?php echo $featured_img_alt; ?>" >
-									</figure>
-								</a>
+									<a class="attachment fancybox-thumb" href="<?php echo $featured_img_large_attr[0]; ?>" title="<?php the_title_attribute( 'echo=0' ); ?>">
+										<figure>
+											<img src="<?php echo $featured_img_large_attr[0]; ?>" width="<?php echo $featured_img_large_attr[1];?>" height="<?php echo $featured_img_large_attr[2];?>" class="attachment" title="<?php echo get_the_title( $featured_img_large_attr ); ?>" alt="<?php echo $featured_img_alt; ?>" >
+										</figure>
+									</a>
 
-							</section>
+								</section>
+
+							<?php endif; ?>
 
 						<?php endif; ?>
 
-					<?php endif; ?>
+						<section class="article-content">
 
-					<section class="article-content">
+							<!-- <div class="article-content-header">
 
-						<div class="article-content-header">
+								<?php get_template_part('wpkit/systems/layouts/parts/post-meta'); ?>
 
-							<?php get_template_part('wpkit/systems/layouts/parts/post-meta'); ?>
+							</div> -->
 
-						</div>
+							<div class="article-content-main">
 
-						<div class="article-content-main">
-
-							<?php the_content(); ?>
-
-						</div>
-
-						<?php if( get_field( 'wpkit_restaurante_map' ) ) : ?>
-
-							<div class="article-map">
-
-								<h5 class="ui-title-small">Ubicación</h5>
-
-								<?php $location = get_field( 'wpkit_restaurante_map' ); ?>
-
-								<div class="acf-map">
-									<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
-								</div>
+								<?php the_content(); ?>
 
 							</div>
 
-						<?php endif; ?>
+							<?php if( get_field( 'wpkit_restaurante_map' ) ) : ?>
 
-						<div class="article-content-footer">
+								<div class="article-map">
 
-							<?php get_template_part('wpkit/systems/layouts/parts/author-meta'); ?>
+									<h5 class="ui-title-small">Ubicación</h5>
 
-							<span class="tags"><?php the_tags( 'Etiquetas: ' ); ?></span>
-							<span class="edit-post-link"><?php edit_post_link( 'Editar' ); ?></span>
-							<?php if( is_single() ) : ?>
-								<span class="comments-count"><?php comments_popup_link('Comentar', '1 Comentario', '% Comentarios'); ?></span>
+									<?php $location = get_field( 'wpkit_restaurante_map' ); ?>
+
+									<div class="acf-map">
+										<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+									</div>
+
+								</div>
+
 							<?php endif; ?>
 
-						</div>
+							<!-- <div class="article-content-footer">
 
-					</section>
+								<?php get_template_part('wpkit/systems/layouts/parts/author-meta'); ?>
 
-					<section class="article-footer">
+								<span class="tags"><?php the_tags( 'Etiquetas: ' ); ?></span>
+								<span class="edit-post-link"><?php edit_post_link( 'Editar' ); ?></span>
+								<?php if( is_single() ) : ?>
+									<span class="comments-count"><?php comments_popup_link('Comentar', '1 Comentario', '% Comentarios'); ?></span>
+								<?php endif; ?>
 
-						<?php comments_template(); ?>
+							</div> -->
 
-					</section>
+						</section>
+
+						<section class="article-related"  id="feed-articulos">
+
+							<div class="posts">
+
+								<h3 class="ui-title-small">Artículos</h3>
+
+								<hr class="ui-articulos">
+
+								<?php wpkit_query_home_posts( 'articulos', 3 ); ?>
+
+							</div>
+
+						</section>
+
+						<section class="article-footer">
+
+							<?php comments_template(); ?>
+
+						</section>
 
 
-				</article>
+					</article>
+
+				</div>
+
+				<div class="wk-col-2">
+
+					<aside class="sidebar-single">
+
+						<?php if( dynamic_sidebar( 'wpkit-widget-sidebar' ) ) : endif; ?>
+
+					</aside>
+
+				</div>
 
 			</div>
 
-			<div class="wk-col-2">
+		</section>
 
-				<aside class="sidebar-single">
 
-		</aside>
-
-			</div>
-
-		</div>
-
-  <?php endwhile; endif; ?>
+	<?php endwhile;  endif; wp_reset_query(); ?>
 
 
 <?php get_footer(); ?>
