@@ -102,11 +102,14 @@ get_header(); ?>
 
 							<div class="posts">
 
-								<h3 class="ui-title-small">Artículos</h3>
+								<?php $category = get_the_category(); ?>
+
+								<h3 class="ui-title-small"><?php echo $category[0]->cat_name; ?></h3>
 
 								<hr class="ui-articulos">
 
-								<?php wpkit_query_home_posts( 'articulos', 3 ); ?>
+								<?php wpkit_query_home_posts(  $category[0]->slug, 3 ); ?>
+
 
 							</div>
 

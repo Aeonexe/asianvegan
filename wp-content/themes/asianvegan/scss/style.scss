@@ -19,6 +19,8 @@ License: © Copyright Alumin.Agency All rights reserved
 @import 'home.scss';
 @import 'slider.scss';
 @import 'sidebar.scss';
+@import 'archive.scss';
+@import 'foro.scss';
 
 body {
 	font-family: 'Open sans', 'arial', sans-serif;
@@ -92,5 +94,54 @@ article.post {
 	}
 	.comment-form-url {
 	    display: none;
+	}
+}
+
+#pagination {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.page-numbers {
+	    font-size: 15px;
+	    display: inline-block;
+	    width: 30px;
+	    height: 30px;
+	    text-align: center;
+	    display: inline-flex;
+	    align-items: center;
+	    justify-content: center;
+	    transition: .25s linear;
+		:not(.prev):not(.next) {
+			background-color: gainsboro;
+			border: 1px solid darkgray;
+
+		}
+		&:hover {
+		    border-color: #3bae99;
+		}
+		&.current {
+		    background-color: #3bae99;
+		}
+	}
+
+}
+
+
+.post-meta {
+	display: flex;
+	.category {
+		margin-right: 12px;
+		background-color: black;
+		color: white;
+		padding: 0px 11px;
+		font-size: 10px;
+		display: flex;
+		align-items: center;
+		font-weight: 700;
+	}
+	time {
+		opacity: .5;
+		font-weight: 700;
 	}
 }

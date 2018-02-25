@@ -98,31 +98,68 @@ get_header(); ?>
 
 						</section>
 
+						<?php if( is_page() ) : ?>
 
-						<section class="article-footer">
+							<section class="article-related"  id="feed-articulos">
 
-							<?php comments_template(); ?>
+								<div class="posts">
 
-						</section>
+									<?php $category = 'restaurantes, recetas, recetas-de-la-comunidad, restaurantes'; ?>
 
+									<h3 class="ui-title-small">También te puede interesar</h3>
+
+									<hr class="ui-articulos">
+
+									<?php wpkit_query_home_posts( $category, 3 ); ?>
+
+
+								</div>
+
+							</section>
+
+							<section class="article-footer">
+
+								<?php comments_template(); ?>
+
+							</section>
+
+						<?php endif; ?>
 
 					</article>
 
 				</div>
 
-                <?php if( ! is_user_logged_in() ) : ?> )
+				<div class="wk-col-2">
 
-    				<div class="wk-col-2">
+					<aside class="sidebar-single">
 
-    					<aside class="sidebar-single">
+						<?php if( is_singular( 'forum' ) ) : ?>
 
-    						<?php wp_login_form(); ?>
+							<?php if( is_user_logged_in() ) : ?>
 
-    					</aside>
+								<?php if( dynamic_sidebar( 'wpkit-widget-sidebar' ) ) : endif; ?>
 
-    				</div>
+							<?php else : ?>
 
-                <?php endif; ?>
+								<div class="custom-login-form">
+
+									<?php wp_login_form(); ?>
+
+								</div>
+
+							<?php endif; ?>
+
+						<?php else : ?>
+
+							<?php if( dynamic_sidebar( 'wpkit-widget-sidebar' ) ) : endif; ?>
+
+
+						<?php endif; ?>
+
+
+					</aside>
+
+				</div>
 
 			</div>
 

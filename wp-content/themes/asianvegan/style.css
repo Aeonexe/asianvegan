@@ -707,7 +707,8 @@ fieldset {
       bottom: 0;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
-      padding: 22px; }
+      padding: 22px;
+      display: block; }
 
 #feed-articulos .feed-thumbnail {
   width: 100%;
@@ -801,6 +802,20 @@ fieldset {
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
 
+.archive .post .excerpt {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 20px 0;
+  font-size: 13px; }
+
+.archive .post .feed-thumbnail {
+  height: 250px !important; }
+
+a.bbp-topic-permalink {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000; }
+
 body {
   font-family: 'Open sans', 'arial', sans-serif;
   font-size: 13px;
@@ -849,3 +864,61 @@ article.post {
       width: initial; }
   .article-footer * .comment-form-url {
     display: none; }
+
+#pagination {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  #pagination .page-numbers {
+    font-size: 15px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: .25s linear;
+    -o-transition: .25s linear;
+    transition: .25s linear; }
+    #pagination .page-numbers :not(.prev):not(.next) {
+      background-color: gainsboro;
+      border: 1px solid darkgray; }
+    #pagination .page-numbers:hover {
+      border-color: #3bae99; }
+    #pagination .page-numbers.current {
+      background-color: #3bae99; }
+
+.post-meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .post-meta .category {
+    margin-right: 12px;
+    background-color: black;
+    color: white;
+    padding: 0px 11px;
+    font-size: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 700; }
+  .post-meta time {
+    opacity: .5;
+    font-weight: 700; }
