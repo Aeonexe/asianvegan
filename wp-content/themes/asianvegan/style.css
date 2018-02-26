@@ -204,7 +204,7 @@ main .wk-section-wrap {
 .ui-bg-gray-important {
   background-color: gray !important; }
 
-.ui-btn, .ui-btn-black,
+.ui-btn, .ui-btn-black, .button, [type="submit"],
 .ui-button {
   font-weight: 400;
   font-size: 14px;
@@ -214,7 +214,7 @@ main .wk-section-wrap {
   padding: 10px 30px;
   display: inline-block;
   border-radius: 0; }
-  .ui-btn:hover, .ui-btn-black:hover,
+  .ui-btn:hover, .ui-btn-black:hover, .button:hover, [type="submit"]:hover,
   .ui-button:hover {
     background-color: #2b544c; }
 
@@ -223,6 +223,9 @@ main .wk-section-wrap {
   color: #fff; }
   .ui-btn-black:hover {
     background-color: gray; }
+
+.button, [type="submit"] {
+  border: 0; }
 
 [class*="ui-title"] {
   font-family: "Open Sans", sans-serif;
@@ -343,6 +346,13 @@ Header */
   #main-header #wk-main-logo img {
     width: 100%;
     height: auto; }
+  #main-header #search-icon {
+    padding: 30px 0px;
+    text-align: right;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 11;
+    position: relative; }
 
 #main-header .wk-main-nav-menu {
   list-style: none;
@@ -611,6 +621,10 @@ body.off-canvas-is-active {
   text-align: center;
   font-size: 116%;
   line-height: .75; }
+  @media (max-width: 770px) {
+    #main-footer {
+      line-height: 1.5;
+      padding: 20px; } }
   #main-footer #main-footer-top {
     padding: 60px 0;
     max-width: 690px;
@@ -1002,3 +1016,55 @@ article.post {
 .clear {
   clear: both;
   display: block; }
+
+#searchform {
+  top: calc(100% - 32px);
+  top: -30px;
+  right: calc(100% - 20px);
+  width: 330px;
+  position: absolute;
+  opacity: 0;
+  z-index: 0; }
+  #searchform .holder {
+    position: absolute;
+    top: calc(100% + 32px);
+    background: #3e3d3d;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  #searchform input.search {
+    height: 36px;
+    border-radius: 0;
+    margin-right: 10px; }
+  #searchform.active {
+    -webkit-animation: searchan .5s forwards;
+    animation: searchan .5s forwards; }
+
+@-webkit-keyframes searchan {
+  0% {
+    top: -30px;
+    opacity: 0; }
+  1% {
+    top: calc(100% - 32px);
+    opacity: 0; }
+  100% {
+    top: calc(100% - 32px);
+    opacity: 1; } }
+
+@keyframes searchan {
+  0% {
+    top: -30px;
+    opacity: 0; }
+  1% {
+    top: calc(100% - 32px);
+    opacity: 0; }
+  100% {
+    top: calc(100% - 32px);
+    opacity: 1; } }

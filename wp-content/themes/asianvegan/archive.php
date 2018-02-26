@@ -51,7 +51,7 @@ get_header(); ?>
 
                         <?php $image_url = wp_get_attachment_url( get_post_thumbnail_id() ); ?>
 
-                        <article class="post first-post">
+                        <article class="post first-post reveal-bottom">
 
 
                                 <div class="wk-cols">
@@ -69,7 +69,7 @@ get_header(); ?>
                                         <h1 class="ui-feed-title"><?php the_title(); ?></h1>
                                         <div class="post-meta">
                                             <div class="category"><?php echo get_the_category_list(', '); ?></div>
-                                            <time class="published"><?php echo get_the_date('M j, Y'); ?></time>	                                            
+                                            <time class="published"><?php echo get_the_date('M j, Y'); ?></time>
                                         </div>
                                         <?php the_excerpt(); ?>
 

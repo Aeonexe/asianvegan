@@ -84,7 +84,7 @@ get_header(); ?>
 
 				</section>
 
-				<section class="posts reveal" id="restaurantes">
+				<section class="posts reveal-bottom" id="restaurantes">
 
 					<h3 class="ui-title-small">Restaurantes</h3>
 
@@ -94,7 +94,7 @@ get_header(); ?>
 
 				</section>
 
-				<section class="posts reveal" id="recetas">
+				<section class="posts reveal-bottom" id="recetas">
 
 					<h3 class="ui-title-small">Recetas</h3>
 
@@ -104,7 +104,7 @@ get_header(); ?>
 
 				</section>
 
-				<section class="posts reveal" id="recetas-de-comunidad">
+				<section class="posts reveal-bottom" id="recetas-de-comunidad">
 
 					<h3 class="ui-title-small">Recetas de la comunidad</h3>
 
@@ -118,7 +118,7 @@ get_header(); ?>
 
 			<div class="wk-col-2">
 
-				<aside class="sidebar-single">
+				<aside class="sidebar-single reveal-bottom">
 
 					<?php if( dynamic_sidebar( 'wpkit-widget-sidebar' ) ) : endif; ?>
 
@@ -130,7 +130,7 @@ get_header(); ?>
 
 	</section>
 
-	<section class="wk-section-wrap" id="video-playlist">
+	<section class="wk-section-wrap reveal-bottom" id="video-playlist">
 
 		<!-- ​<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL474LruqQPTb5LMAuOOnH_Cm9r3dggGFy&showinfo=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
 

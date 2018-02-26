@@ -99,6 +99,11 @@
 	}
 }
 
+.button, [type="submit"] {
+	@extend .ui-btn;
+	border: 0;
+}
+
 
 // Title
 [class*="ui-title"] { font-family: $headersFont; line-height: 1.25;}

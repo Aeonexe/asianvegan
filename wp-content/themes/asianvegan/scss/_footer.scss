@@ -6,6 +6,10 @@
         size: cover;
         position: center;
     }
+    @media #{$onlyMobile} {
+        line-height: 1.5;
+        padding: 20px;
+    }
 
     text-align: center;
     #main-footer-top {

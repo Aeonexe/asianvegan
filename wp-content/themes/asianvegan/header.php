@@ -84,9 +84,30 @@
 
 							</div>
 
-							<div class="wk-col-9 wk-d wk-main-nav-container">
+							<div class="wk-col-8 wk-d wk-main-nav-container">
 
 								<?php get_template_part('wpkit/systems/layouts/parts/menu-main'); ?>
+
+							</div>
+
+							<div class="wk-col-1 wk-d" style="position: relative;">
+
+								<span id="search-icon" class="icon toggle fa fa-search"></span>
+
+								<section id="searchform">
+
+									  <form method="get" action="<?php bloginfo('home'); ?>/">
+
+
+											<div class="holder">
+												<input class="search" type="text" name="s" value="Buscar..." onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
+												<button type="submit" value="" class="button" />Buscar</button>
+
+											</div>
+
+									  </form>
+
+								</section>
 
 							</div>
 
