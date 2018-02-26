@@ -141,9 +141,26 @@ get_header(); ?>
 
 							<?php else : ?>
 
+
 								<div class="custom-login-form">
 
-									<?php wp_login_form(); ?>
+									<h1 class="ui-title-small">Login</h1>
+
+									<div class="holder">
+
+										<?php $loginargs = array(
+											'label_username' => __( 'Usuario' ),
+											'label_password' => __( 'Contraseña' ),
+											'label_remember' => __( 'Recuerdame' ),
+											'label_log_in'   => __( 'Log In' ),
+											'value_username' => 'Usuario',
+										); ?>
+
+										<?php wp_login_form($loginargs); ?>
+
+										<span class="clear"></span>
+
+									</div>
 
 								</div>
 

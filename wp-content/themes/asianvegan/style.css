@@ -796,6 +796,9 @@ fieldset {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       padding: 40px 0px 40px 40px; } }
+  @media (max-width: 770px) {
+    .sidebar-single {
+      margin-bottom: 20px; } }
   .sidebar-single img {
     width: 100%;
     height: auto;
@@ -922,3 +925,74 @@ article.post {
   .post-meta time {
     opacity: .5;
     font-weight: 700; }
+
+.custom-login-form {
+  border: 1px solid gainsboro;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .custom-login-form label {
+    font-weight: 700;
+    display: block; }
+  .custom-login-form .input {
+    height: 37px;
+    width: 100%;
+    background: #ecebeb; }
+  .custom-login-form [class*="ui-title"] {
+    background: gainsboro;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 13px;
+    margin: 0; }
+  .custom-login-form .holder {
+    padding: 20px; }
+  .custom-login-form .button {
+    padding: 6px 12px;
+    margin: 12px 6px;
+    background-color: gainsboro;
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #3aae97;
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 0; }
+    .custom-login-form .button:hover {
+      background-color: #2b544c; }
+  .custom-login-form .login-remember {
+    float: left;
+    width: 50%;
+    margin: 18px 0; }
+  .custom-login-form .login-submit {
+    float: right;
+    width: 50%;
+    margin: 0;
+    display: table;
+    text-align: right; }
+    .custom-login-form .login-submit:after {
+      content: "";
+      display: table-cell;
+      clear: both; }
+  .custom-login-form #rememberme {
+    -webkit-appearance: none;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #efeded;
+    vertical-align: middle;
+    border: 1px solid #d4d4d4;
+    cursor: pointer; }
+    .custom-login-form #rememberme:focus {
+      background: #3aae97; }
+
+.clear {
+  clear: both;
+  display: block; }

@@ -5,6 +5,7 @@
 		<head <?php wk_opengraph_header(); ?>>
 
 			<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+			<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
 			<?php wp_head(); ?>
 
@@ -22,7 +23,7 @@
 
 					<div class="wk-section-wrap">
 
-						<div class="wk-cols">
+						<div class="wk-cols-m">
 
 							<div class="wk-col absolute-left">
 
