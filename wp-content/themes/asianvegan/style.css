@@ -734,10 +734,16 @@ fieldset {
   #feed-articulos .posts .post {
     padding-top: 18px; } }
 
-#video-playlist iframe {
-  width: 100%;
-  height: 500px;
-  padding: 0px 0 40px; }
+#video-playlist {
+  padding-bottom: 40px; }
+  #video-playlist iframe {
+    width: 100%;
+    height: 500px;
+    padding: 0px 0 40px; }
+  #video-playlist .html5gallery-container-1 {
+    height: 460px; }
+  #video-playlist div[style="display:block;visibility:visible;position:absolute;top:10px;left:10px;width:180px;height:18px;line-height:18px;text-align:center;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background-color:#fff;color:#333;font-size:12px;font-family:Arial,Helvetica,sans-serif;"] {
+    display: none !important; }
 
 #main-slider {
   padding: 0 0 30px; }
