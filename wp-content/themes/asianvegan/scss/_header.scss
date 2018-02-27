@@ -59,6 +59,9 @@ Header */
         z-index: 11;
         position: relative;
     }
+    .wk-main-nav-container {
+        padding-left: 70px;
+    }
 }
 
 #main-header .wk-main-nav-menu {
@@ -113,6 +116,7 @@ Header */
 	transition: top .25s ease-in-out .05s, opacity .25s linear.15s;
 	display: none;
 	opacity: 0;
+        min-width: 220px;
 }
 
 #main-header .wk-main-nav-menu > .menu-item.menu-is-active > .sub-menu {

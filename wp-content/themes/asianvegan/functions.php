@@ -718,7 +718,7 @@ function wpkit_social_media() {
 
 	if( have_rows( 'wpkit_social_media', 'option' ) ) : while( have_rows( 'wpkit_social_media', 'option' ) ) : the_row(); ?>
 
-		<a href="<?php the_sub_field( 'wpkit_social_media_red', 'option' ); ?>"><span class="fa fa-<?php the_sub_field( 'wpkit_social_media_icon', 'option' ); ?>"></span></a>
+		<a href="<?php the_sub_field( 'wpkit_social_media_red', 'option' ); ?>" target="_blank"><span class="fa fa-<?php the_sub_field( 'wpkit_social_media_icon', 'option' ); ?>"></span></a>
 
 	<?php endwhile; endif;
 }
@@ -733,11 +733,11 @@ function set_my_comment_title( $defaults ){
 
 
 
-//
-function custom_blockusers_init() {
+//redirect en el login
+function wpkit_redirect_login() {
   if ( is_user_logged_in() && is_admin() && !current_user_can( 'administrator' ) ) {
     wp_redirect( home_url() );
     exit;
   }
 }
-add_action( 'init', 'custom_blockusers_init' );
+add_action( 'init', 'wpkit_redirect_login' );

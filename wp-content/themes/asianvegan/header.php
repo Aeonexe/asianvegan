@@ -4,7 +4,7 @@
 
 		<head <?php wk_opengraph_header(); ?>>
 
-			<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr7WDeWei6HmJs1E50MqH92TuKtEKhvsI"></script>
 			<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
 			<?php wp_head(); ?>
@@ -90,7 +90,7 @@
 
 							</div>
 
-							<div class="wk-col-1 wk-d" style="position: relative;">
+							<div class="wk-col-1 wk-d wk-text-right" style="position: relative;">
 
 								<span id="search-icon" class="icon toggle fa fa-search"></span>
 
@@ -127,6 +127,37 @@
 
 				</header>
 
-				<?php get_template_part( 'wpkit/systems/layouts/parts/menu-mobile' ); ?>
+				<section id="off-canvas">
+
+					<?php
+
+						$nav_args = array(
+							'theme_location'  => 'main-nav',
+							'menu'            => '',
+							'container'       => 'nav',
+							'container_class' => 'menu main-menu',
+							'container_id'    => 'nav-main-mobile',
+							'menu_class'      => '',
+							'menu_id'         => '',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'before'          => '',
+							'after'           => '',
+							'link_before'     => '',
+							'link_after'      => '',
+							'items_wrap'      => '<ul id="%1$s" class="menu %2$s">%3$s</ul>',
+							'depth'           => 0, // How many levels of the hierarchy are to be included where 0 means all. -1 displays links at any depth and arranges them in a single, flat list.
+							'walker'          => ''
+						);
+
+						wp_nav_menu( $nav_args );
+
+						/* Para pasar el menu sin los argumentos
+						wp_nav_menu( 'theme_location=header-menu' );
+						*/
+
+					?>
+
+				</section>
 
 				<main>

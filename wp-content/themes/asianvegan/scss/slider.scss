@@ -16,6 +16,20 @@
             bottom: 14%;
             left: calc(100% / 5 - 40px);
         }
+        @media #{$onlyMobile} and #{$onlyfromTablet} {
+            .ui-button {
+                transform: scale(.7);
+                bottom: 9%;
+                left: 72px;
+            }
+        }
+        @media #{$onlyPhone} {
+            .ui-button {
+                transform: scale(0.7);
+                bottom: -5%;
+                left: 12px;
+            }
+        }
     }
     .slick-dots {
         position: absolute;

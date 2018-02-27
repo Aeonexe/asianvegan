@@ -97,6 +97,18 @@
         height: 460px;
     }
     div[style="display:block;visibility:visible;position:absolute;top:10px;left:10px;width:180px;height:18px;line-height:18px;text-align:center;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background-color:#fff;color:#333;font-size:12px;font-family:Arial,Helvetica,sans-serif;"] {
-    display: none !important;
-}
+        display: none !important;
+    }
+    .html5gallery-container-1 {
+        background: #333333;
+    }
+    .html5gallery-tn-1 {
+        background: black;
+        border: 0;
+        margin: 1px 0;
+    }
+    .html5gallery-tn-selected-1 {
+        background: #16985d;
+        border: 0;
+    }
 }

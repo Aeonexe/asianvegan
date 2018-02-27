@@ -29,6 +29,12 @@ get_header(); ?>
 
 							<h1 class="ui-title-big"><?php the_title(); ?></h1>
 
+							<div class="share-button">
+
+								<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','pagename','resizable,height=400,width=480'); return false;"><span class="fa fa-facebook"></span> <i class="sep">|</i> Compartir</a>
+
+							</div>
+
 							<?php if ( has_post_thumbnail() ) : ?>
 
 								<?php
@@ -42,11 +48,9 @@ get_header(); ?>
 
 								<section class="article-header">
 
-									<a class="attachment fancybox-thumb" href="<?php echo $featured_img_large_attr[0]; ?>" title="<?php the_title_attribute( 'echo=0' ); ?>">
-										<figure>
-											<img src="<?php echo $featured_img_large_attr[0]; ?>" width="<?php echo $featured_img_large_attr[1];?>" height="<?php echo $featured_img_large_attr[2];?>" class="attachment" title="<?php echo get_the_title( $featured_img_large_attr ); ?>" alt="<?php echo $featured_img_alt; ?>" >
-										</figure>
-									</a>
+									<figure>
+										<img src="<?php echo $featured_img_large_attr[0]; ?>" width="<?php echo $featured_img_large_attr[1];?>" height="<?php echo $featured_img_large_attr[2];?>" class="attachment" title="<?php echo get_the_title( $featured_img_large_attr ); ?>" alt="<?php echo $featured_img_alt; ?>" >
+									</figure>
 
 								</section>
 
